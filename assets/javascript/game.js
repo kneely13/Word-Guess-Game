@@ -1,126 +1,137 @@
 // Variables 
-var userGuess;
-var currentWord;
+var wordBank=['cat','dog','horse','cow','hippopotamus','scorpion','squirrel','chimpanzee','crocodile','alligator','giraffe','hamster','monkey','octopus','owl','panda','goldfish','rabbit']; 
+userGuess = [];
+var wins = 0;
+var loss = 0;
+var wrongLetter = [];
 var questionBank;
-var wrongAnswerCount = 0;
+var livesLeft = [];
 var messages;
-var win ;
-var numberOfWins = 0;
-
-
-
-//Arrays
-
-var wordArray=['cat','dog','horse','cow','hippopotamus','scorpion','squirrel','chimpanzee','crocodile','alligator','giraffe','hamster','monkey','octopus','owl','panda','goldfish','rabbit'];
-
-
 var alphabet =['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z'];
-
-
-//Random word Generator
-var currentnWord = myArray[Math.floor(Math.random() * myArray.wordArray)];
-
-
-
+var dashes = [];
+var userGuesses = [];
+var rand;
 
 // Functions
-        // Letters Already Guessed: (Letters the user has guessed, displayed like L Z Y H).
-         
-
-
-
-        //On key up 
-document.onkeyup = function(event) 
-{
-        // var userGuess = String.fromCharCode(event.keyCode).toLowerCase();
-    var dashes = "";
-   
-    for (i = 0; i < chosenWord.length; i++)
+        
+function startGame(){
+ rand = wordBank[Math.floor(Math.random() * wordBank.length)];
+    console.log('random Word =' + rand);
+    for(var i = 0; i < rand.length; i++)
     {
-        if (chosenWord.charAt(i) == " ") {
-          dashes += " ";
-        } else {
-          dashes += "-";
-        }
+        dashes.push('_');
+    }
+    //Printing dashes to the screen
+    document.getElementById('wordBlanks').textContent = dashes.join(" ");
+
+    //Reset
+    wrongLetter = [];
+    livesLeft = 10;
+
+    //HTML so that it prints on sreen
+    document.getElementById('lives-left').textContent = livesLeft;
+}      
+
+//User Guesses
+function winLose()
+{
+    if(winCounter === rand.length)
+    {
+        document.write(messages.win);
+        start();
+        //Later add music and winning picture to this
+    }
+    else if(livesLeft === 0)
+    {
+         document.write(messages.win);   
+            start();
     }
 
 
-    document.getElementById("word").innerHTML = dashes;
-    dashes.charAt(0) = "a";
 
+
+
+
+document.onkeyup = function(event)
+{
+    //This is needed to be saved as variable to use somewhere else
+    userGuesses = event.key; 
+    
+    //Determines whether the user guess is included in the random word 
+    // if it does we get value greater than -1. 
+    if(rand.indexOf(userGuesses) > -1 )
+    {
+        //if does aggsist, push it in the right anwser for loop
+        for (var i = 0; i < rand.length; i++)
+        {
+            if(rand[i] === userGuesses)
+            {
+                dashes[i] = userGuesses;
+                console.log(dashes);
+                winCounter++;
+                winLose();
+            }
+        }
+    }
+    else 
+    {
+        wrongLetter.push(userGuesses);
+        livesLeft--;
+        console.log(wrongLetter);
+        winlose();
+    }
 }
-
-
-
-
-// Number of Guesses Remaining: (# of guesses remaining for the user).
-
-var guessesRemaining = 0;
 
 
 // function calls
 
+startGame();
+
+console.log(rand[0]);
 
 
 
+//     //Objects
+// var questionBank = {
 
-    //Objects
-var questionBank = {
+//     'cat': "This question should be visible during guesses",
+//     // 'dog',
+//     // 'horse',
+//     // 'cow',
+//     // 'hippopotamus',
+//     // 'scorpion',
+//     // 'squirrel',
+//     // 'chimpanzee',
+//     // 'crocodile',
+//     // 'alligator',
+//     // 'giraffe',
+//     // 'hamster','
+//     // ''monkey',
+//     // 'octopus',
+//     // 'owl',
+//     // 'panda',
+//     // 'goldfish',
+//     // 'rabbit'=
+// };
 
-    'cat': "This question should be visible during guesses",
-    // 'dog',
-    // 'horse',
-    // 'cow',
-    // 'hippopotamus',
-    // 'scorpion',
-    // 'squirrel',
-    // 'chimpanzee',
-    // 'crocodile',
-    // 'alligator',
-    // 'giraffe',
-    // 'hamster','
-    // ''monkey',
-    // 'octopus',
-    // 'owl',
-    // 'panda',
-    // 'goldfish',
-    // 'rabbit'=
-};
-
-messages = {
-    win: 'You win!',
-    lose: 'Game over!',
-    guessed: ' already guessed, please try again...',
-    validLetter: 'Please enter a letter from A-Z'
-};
+// messages = {
+//     win: 'You win!',
+//     lose: 'Game over!',
+//     guessed: ' already guessed, please try again...',
+//     validLetter: 'Please enter a letter from A-Z'
+// };
 
 
 
 // Conditions
 
-if (wordArray[i]===currentWord.length && currentWord.length < lives.length){
-    console.log(messages.win);
-    }
-else if (wordArray[i]!==currentWord.length ||  currentWord.length >= lives.length){
-    console.log(messages.lose);
+// if (wordArray[i]===currentWord.length && currentWord.length < lives.length){
+//     console.log(messages.win);
+//     }
+// else if (wordArray[i]!==currentWord.length ||  currentWord.length >= lives.length){
+//     console.log(messages.lose);
     
-}
-else {
-    console.log(messages.validLetter);
-}
-
-
-
-
-var Wins =  ("# of times user guessed the word correctly");
-var losses = ("# of times user didnt guess word in the guess amount given")
-// After the user wins/loses the game should automatically choose another word and make the user play it. -->
-    
-
-// loops
-
-for (var i=0 ; i >= currentWord.length; i++ ){
-
-
-
-}
+// }
+// else {
+    // console.log(messages.validLetter);
+// }
