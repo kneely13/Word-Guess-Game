@@ -91,47 +91,16 @@ console.log(rand[0]);
 
 
 
-//     //Objects
-// var questionBank = {
+   //Objects
 
-//     'cat': "This question should be visible during guesses",
-//     // 'dog',
-//     // 'horse',
-//     // 'cow',
-//     // 'hippopotamus',
-//     // 'scorpion',
-//     // 'squirrel',
-//     // 'chimpanzee',
-//     // 'crocodile',
-//     // 'alligator',
-//     // 'giraffe',
-//     // 'hamster','
-//     // ''monkey',
-//     // 'octopus',
-//     // 'owl',
-//     // 'panda',
-//     // 'goldfish',
-//     // 'rabbit'=
-// };
+   var messages = {
+    win: 'You win!',
+    lose: 'Game over!',
+    guessed: ' already guessed, please try again...',
+    validLetter: 'Please enter a letter from A-Z',
+}
 
-// messages = {
-//     win: 'You win!',
-//     lose: 'Game over!',
-//     guessed: ' already guessed, please try again...',
-//     validLetter: 'Please enter a letter from A-Z'
-// };
-
-
-
-// Conditions
-
-// if (wordArray[i]===currentWord.length && currentWord.length < lives.length){
-//     console.log(messages.win);
-//     }
-// else if (wordArray[i]!==currentWord.length ||  currentWord.length >= lives.length){
-//     console.log(messages.lose);
-    
-// }
-// else {
-    // console.log(messages.validLetter);
-// }
+var questionBank = {
+    'cat': "This question should be visible during guesses"
+    }
+}
