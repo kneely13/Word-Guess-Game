@@ -1,10 +1,11 @@
 body {
-        margin: auto;
-        opacity: 10px;
-        background-color:lightgray;
-        font-family: "Work Sans", sans-serif;
-        font-weight: 300;
-        text-align: left;
-     
+        background-color:brown;
+        border:  solid blue;
+}
+
+header {
+        border:  solid green;
+padding:1em;
+background-image: url("../images/Guess_logo.jpg");
 }
 

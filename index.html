@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="assets/css/reset.css" />
     <link rel="stylesheet" type="text/css" media="screen" href="assets/css/style.css" />
-    <script src="game.js"></script>
+    <script src="assets/javascript/game.js"></script>
 </head>
 <body>
 
@@ -27,39 +27,37 @@
         
         
         
-        If the word is madonna, display it like this when the game starts: _ _ _ _ _ _ _.
-        As the user guesses the correct letters, reveal them: m a d o _  _ a.
         
-        
-        
-        Number of Guesses Remaining: (# of guesses remaining for the user).
-
-        Letters Already Guessed: (Letters the user has guessed, displayed like L Z Y H).
-
-        After the user wins/loses the game should automatically choose another word and make the user play it. -->
 
 
         
     <header class="header">
-            <div class="container">
               <nav class=nav-bar>
                 <a href="index.html" id="logo">This will be a button to go to other games</a> <!--mAKE BUTTON TO GO to porfolio -->
-              </nav>
-            </div>
+              </nav> 
     </header>
     
 
 
     <div id="main-container" class="container">
-    <section class="main-section">
-      <h1>Hangman</h1>
+      <section class="main-section">
+        <div class="hangmanTitle">
+          <h1>Hangman</h1>
+        </div>
+        <br>
+        <div class="gameContent">
+          <h1>Press any key to get started!</h1>
 
-      <img  src="../images/Guess_logo.jpg" class="rounded float-left" alt="Kristian Neely" >
 
-      
-    </section>
+          <h1>Simple 'Hangman' Game</h1>
 
-  </div>
+<p>[no people will actually be harmed during this game]</p>
+<form id="hangman">
+    <input type="text" maxlength="1" minlength="1" name="letter" id="letter" placeholder="Guess a letter" />
+    
+</form>
+<ul id="letters"></ul>
+
 
 </body>
 </html>
