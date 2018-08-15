@@ -13,7 +13,10 @@ var userGuesses = [];
 var rand;
 
 // Functions
-        
+
+
+
+
 function startGame(){
  rand = wordBank[Math.floor(Math.random() * wordBank.length)];
     console.log('random Word =' + rand);
@@ -31,6 +34,16 @@ function startGame(){
     //HTML so that it prints on sreen
     document.getElementById('lives-left').textContent = livesLeft;
 }      
+
+
+var letter = event.key.toLowerCase();
+
+if(letter===alphabet[i])
+{
+    startGame();
+console.log(rand[0]);
+}
+
 
 //User Guesses
 function winLose()
@@ -85,9 +98,7 @@ document.onkeyup = function(event)
 
 // function calls
 
-startGame();
 
-console.log(rand[0]);
 
 
 

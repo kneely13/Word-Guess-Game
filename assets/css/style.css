@@ -26,6 +26,17 @@ background-image: url("../images/Guess_logo.jpg");
         padding-left: 2.7em;
 }
 
+#guess-logo-1 {
+float:left;
+}
+
+#guess-logo-2 {
+        float:right;
+        }
+h1{
+
+}
+
 .intro-body {
 
         padding: 2em;
