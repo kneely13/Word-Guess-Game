@@ -1,114 +1,59 @@
 <!DOCTYPE html>
-<html>
+<html lang="en-us">
 <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="UTF-8" />
     <title>Guess</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="assets/css/reset.css" />
     <link rel="stylesheet" type="text/css" media="screen" href="assets/css/style.css" />
-    <script src="assets/javascript/game.js"></script>
+    
 </head>
 <body>
-
-
-
-<div id="introPage" >
-  <div class="introHeading">
-    <div id="guess-logo-1">
-    <img  src="assets/images/Guess_logo.jpg" width="100px" height="100px" alt="Guess Logo">
-    </div>
-    <h1 class='game-title'><strong>Welcome to Hangman!</strong></h1>
-    <div id="guess-logo-2">
-      <img  src="assets/images/Guess_logo.jpg" width="100px" height="100px" alt="Guess Logo">
-    </div>
-  </div>
-
-  <div class='intro-body'>
-    <h3 id='intro-directions'>Press any key to get started!</h3>
-  </div>
-    
-  //Insert image of hangman picture
-</div>
-
-<div class="gamePage">
-  <div class="game">
-    <h3 id='game-directions'>Press a letter on your keyboard that you want to guess.</h3>
-    <br>
-  </div>
-  <div class="game-body">
-
-      <h3 id='wordBlanks'>_ _ _ _ _ _ _ _ _ _ _ _ _ _ </h3>
-
-  </div>
-
-  
-
-  <div class = "game-default">
-    <div class = "game-body">
-
-        <strong>Wrong Guesses: </strong><span id="wrong-guesses"></span>
-
-    </div>
-  </div>
-
-  <div class = "game-default">
-      <div class = "game-body">
-  
-          <strong>Lives Remaining: </strong><span id="lives-left"> 10 </span>
-  
+  <div class="container" >
+    <div class="panel panel-default">
+      <div class = 'panel-heading'>
+        <div id="guess-logo-1">
+          <img  src="assets/images/Guess_logo.jpg" width="100px" height="100px" alt="Guess Logo">
+        </div>
+        <h1 class='panel-title'><strong>Welcome to Hangman!</strong></h1>
+        <div id="guess-logo-2">
+          <img  src="assets/images/Guess_logo.jpg" width="100px" height="100px" alt="Guess Logo">
+        </div>
+      </div>
+      
+      <div class='panel-heading-2'>
+        <h3>Press any key to get started!<span id="start-key-press"></span></h3>
+      </div>
+      
+      <div class='panel-body'>
+        <h3 id='wordBlanks'>_ _ _ _ _ _ _ _ _ _ _ _ _ _ </h3>
       </div>
     </div>
 
-</div>
-<!-- 
+    <div class="panel panel-default">
+      <div class='panel-body'>
+        <strong>Wrong Guesses: </strong> <span id='wrong-guesses'>0</span>
+      </div>
+    </div>
 
-         Choose a theme for your game! 
-            In the demo, we picked an 80s theme: 80s questions, 80s sound and an 80s aesthetic. 
-            You can choose any subject for your theme, though, so be creative!
-        
-            Use key events to listen for the letters that your players will type.
-        
-        
-        
-            Display the following on the page:
-        
-        Wins: (# of times user guessed the word correctly).
-        
-        
-        
-        
+    <div class="panel panel-default">
+      <div class='panel-body'>
+        <strong>Lives Left: </strong> <span id='lives-left'> 10</span>
+      </div>
+    </div>
 
+    <div class="panel panel-default">
+      <div class='panel-body'>
+        <strong>Wins: </strong> <span id='win-counter'>0</span>
+      </div>
+    </div>
 
-        
-    <header class="header">
-              <nav class=nav-bar>
-                <a href="index.html" id="logo">This will be a button to go to other games</a> mAKE BUTTON TO GO to porfolio 
-              </nav> 
-    </header>
-    
-
-
-    <div id="main-container" class="container">
-      <section class="main-section">
-        <div class="hangmanTitle">
-          <h1>Hangman</h1>
-        </div>
-        <br>
-        <div class="gameContent">
-          <h1>Press any key to get started!</h1>
-
-
-          <h1>Simple 'Hangman' Game</h1>
-
-<p>[no people will actually be harmed during this game]</p>
-<form id="hangman">
-
-    <input type="text" maxlength="1" minlength="1" name="letter" id="letter" placeholder="Guess a letter" />
-    
-</form>
-<ul id="letters"></ul> -->
-
-
+    <div class="panel panel-default">
+      <div class='panel-body'>
+        <strong>Losses: </strong> <span id='loss-counter'>0</span>
+      </div>
+    </div>
+  </div>
+  <script type="text/javascript" src="assets/javascript/game.js">
+  </script>
 </body>
 </html>
