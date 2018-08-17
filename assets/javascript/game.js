@@ -13,7 +13,10 @@ var userGuesses = [];
 var rand;
 var winCounter=0;
 
+
+
 function startGame(){
+    dashes=[];
  rand = wordBank[Math.floor(Math.random() * wordBank.length)];
     console.log('random Word = ' + rand);
     for(var i = 0; i < rand.length; i++)
@@ -33,47 +36,64 @@ function startGame(){
 
 function winLose()
 {
-    if(winCounter === rand.length)
+    if(rand === dashes.join(''))
     {
         // document.write(messages.win);
-        alert("messages.loose");
+        // alert("messages.loose");
+        wins++;
+        document.getElementById('win-counter').textContent = wins
+        startGame();
         
         //Later add music and winning picture to this
     }
-    else if(livesLeft !== 0)
+    else if(livesLeft === 0)
     {
-         alert("messages.win");   
-         
+        //  alert("messages.win");   
+         loss++;
+         document.getElementById('loss-counter').textContent = loss
+         startGame();
     }
-}    
+}  
+
+var update= function(badLetters, letters) {
+    document.getElementById('wordBlanks').textContent = letters.join(', ')
+    document.getElementById('wrong-guesses').textContent = badLetters.join(', ')
+    document.getElementById('lives-left').textContent = livesLeft
+   
+}
+
 document.onkeyup = function(event)
 {
     //This is needed to be saved as variable to use somewhere else
-    userGuesses = event.key; //Determines whether the user guess is included in the random word 
+    userGuesses.push(event.key); //Determines whether the user guess is included in the random word 
     // if it does we get value greater than -1. 
-    if(rand.indexOf(userGuesses) > -1)
+    if(rand.indexOf(event.key) > -1)
     {
         //if does aggsist, push it in the right anwser for loop
         for (var i = 0; i < rand.length; i++)
         {
-            if(rand[i] === userGuesses)
+            if(rand[i] === event.key)
             {
-                dashes[i] = userGuesses;
+                dashes[i] = event.key;
                 console.log(dashes);
                 winCounter++;
                 winLose();
+                update(wrongLetter, dashes);
             }
         }
     }
     else 
     {
-        wrongLetter.push(userGuesses);
+        wrongLetter.push(event.key);
         livesLeft--;
         console.log(wrongLetter);
-        winlose();
+        winLose();
+        update(wrongLetter, dashes);
     }
 }
 //User Guesses
+
+
 
 startGame();
 // 
