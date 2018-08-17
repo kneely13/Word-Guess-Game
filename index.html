@@ -5,55 +5,83 @@
     <title>Guess</title>
     
     <link rel="stylesheet" type="text/css" media="screen" href="assets/css/style.css" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     
 </head>
 <body>
-  <div class="container" >
-    <div class="panel panel-default">
-      <div class = 'panel-heading'>
-        <div id="guess-logo-1">
-          <img  src="assets/images/Guess_logo.jpg" width="100px" height="100px" alt="Guess Logo">
+  <div class="row">
+    
+    <div class="col-lg-12">
+      <div class="panel panel-default">
+        <div class = 'panel-heading-1'>
+          
+            
+          <h1 class='panel-title' style= color:white;  ><strong>Welcome to Hangman!</strong></h1>
+
+          
         </div>
-        <h1 class='panel-title'><strong>Welcome to Hangman!</strong></h1>
-        <div id="guess-logo-2">
-          <img  src="assets/images/Guess_logo.jpg" width="100px" height="100px" alt="Guess Logo">
+            
+        <div class='panel-heading-2' style= color:white;>
+          <h3>Press any key to get started!<span id="start-key-press"></span></h3>
         </div>
       </div>
-      
-      <div class='panel-heading-2'>
-        <h3>Press any key to get started!<span id="start-key-press"></span></h3>
+    </div>
+    
+
+
+    <div class="col-lg-8">
+    
+     <!-- Image div of Hangman here  -->
+     <div id="image-container">
+        <img id="head" src="assets/images/head.jpg" width="135px" height="135px" alt="Guess Logo">
+        <img id="arm-l" src="assets/images/arm-left.png" width="40px" height="80px" alt="Guess Logo">
+        <img id="chest" src="assets/images/Hangman-chest.png" width="73px" height="83px" alt="Guess Logo">
+        <img id="arm-r" src="assets/images/arm-right.png" width="45px" height="80x" alt="Guess Logo">
+        <img id="leg-l" src="assets/images/leg-left.png" width="68px" height="75px" alt="Guess Logo">  
+        <img id="leg-r" src="assets/images/leg-right.png" width="68px" height="75px" alt="Guess Logo">
       </div>
-      
+
+    
+    </div>
+
+
+    <div class="col-4"><br>
+      <div class="panel panel-default">
+        <div class='panel-body'>
+          <strong class="wrong">Wrong Guesses: </strong> <span id='wrong-guesses'></span>
+        </div>
+      </div>
+  
+      <div class="panel panel-default">
+        <div class='panel-body'>
+          <strong>Lives Left: </strong> <span id='lives-left'> </span>
+        </div>
+      </div>
+  
+      <div class="panel panel-default">
+        <div class='panel-body'>
+          <strong>Wins: </strong> <span id='win-counter'>0</span>
+        </div>
+      </div>
+  
+      <div class="panel panel-default">
+        <div class='panel-body'>
+          <strong>Losses: </strong> <span id='loss-counter'>0</span>
+        </div>
+      </div>
+    </div>
+    
+
+
+    <div class="col-12">
       <div class='panel-body'>
         <h3 id='wordBlanks'>_ _ _ _ _ _ _ _ _ _ _ _ _ _ </h3>
       </div>
     </div>
 
-    <div class="panel panel-default">
-      <div class='panel-body'>
-        <strong>Wrong Guesses: </strong> <span id='wrong-guesses'></span>
-      </div>
-    </div>
-
-    <div class="panel panel-default">
-      <div class='panel-body'>
-        <strong>Lives Left: </strong> <span id='lives-left'> </span>
-      </div>
-    </div>
-
-    <div class="panel panel-default">
-      <div class='panel-body'>
-        <strong>Wins: </strong> <span id='win-counter'>0</span>
-      </div>
-    </div>
-
-    <div class="panel panel-default">
-      <div class='panel-body'>
-        <strong>Losses: </strong> <span id='loss-counter'>0</span>
-      </div>
-    </div>
-  </div>
-  <script type="text/javascript" src="assets/javascript/game.js">
-  </script>
+    
+  </div>     
+<script type="text/javascript" src="assets/javascript/game.js">
+</script>
 </body>
 </html>

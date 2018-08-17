@@ -1,41 +1,139 @@
-body {
-        background-color: brown;
-    border: 5px solid blue;
+
+    body {
+        margin: 0;
+        font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+        font-size: 2rem;
+        font-weight: 400;
+        line-height: 1.5;
+        color: white;
+        text-align: left;
         
+        background-image: url("../images/Dark-Forest.jpg");
+    }
+
+.col, .col-1, .col-10, .col-11, .col-12, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-auto, .col-lg, .col-lg-1, .col-lg-10, .col-lg-11, .col-lg-12, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-auto, .col-md, .col-md-1, .col-md-10, .col-md-11, .col-md-12, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-auto, .col-sm, .col-sm-1, .col-sm-10, .col-sm-11, .col-sm-12, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-auto, .col-xl, .col-xl-1, .col-xl-10, .col-xl-11, .col-xl-12, .col-xl-2, .col-xl-3, .col-xl-4, .col-xl-5, .col-xl-6, .col-xl-7, .col-xl-8, .col-xl-9, .col-xl-auto {
+        position: relative;
+        width: 100%;
+        min-height: 1px;
+        padding-right: 37px;
+        padding-left: 15px;
+        text-align: center;
+        padding-bottom: 10em;
+        padding-left: 15px;
+    }
+
+    .h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
+        margin-bottom: .5rem;
+        font-family: inherit;
+        font-weight: 500;
+        line-height: 1.2;
+        color: white;
+    }
+
+    .col-6 {
+padding-bottom:1em;
+        padding-right:1em;
+    }
+   
+    
+    img .head {
+        padding:1em;    
+    }
+
+    #wordBlanks {
+            font-size:100px;
+    }
+
+    b, strong {
+        font-weight: bolder;
+        font-size: 35px;
+    }
+
+    div.panel.panel-default {
+        color:white;
+    }
+
+    span#lives-left {
+        font-size:45px;
+        color:red;
+    }
+    span#wrong-guesses {
+        font-size:35px;
+        color:red;
+    }
+    span#win-counter {
+        font-size:45px;
+        color:green;
+    }
+    span#loss-counter {
+        font-size:45px;
+        color:red;
+    }
+
+    .col-4 {
+        -ms-flex: 0 0 50%;
+        flex: 0 0 50%;
+        max-width: 27%;
+    }
+
+    h3#wordBlanks {
+        color:white;
+    }
+
+    div.col-4{
+        margin-top:-80px;
+        padding:0em;
+    }
+
+    div.col-12{
+        
+        padding:10px;
+        margin-top:15px;
+    }
+
+    .col-lg-8 {
+        padding-left: 1em;
+        float-left: 10px;
+        margin-top: 0;
+        margin-bottom: 10px;
+        padding-bottom: 0em;
+        padding-right: 1em;
+        height: 316px;
+    }
+
+    div#image-container {
+        height:408px;
+    }
+
+    
+
+    img#leg-r {
+    
+    margin-left: -14px;
+    margin-top: 205px;
 }
-
-header {
-border:  solid green;
-padding:1em;
-background-image: url("../images/Guess_logo.jpg");
-}
-
-#introPage {
-        border: 10px solid orange;
-        background-color: orange;
-
-}
-
-.introHeading {
-        border: 2px solid blue;
-        background-color: brown;
-        font-size: 100px;
-        /* position: relative; */
-        padding-left: 2.7em;
-}
-
-#guess-logo-1 {
-float:left;
-}
-
-#guess-logo-2 {
-        float:right;
+    
+    img#leg-l {
+            margin-left: -141px;
+            margin-top: 214px;
+        }
+        
+        img#chest {
+            margin-left: -10px;
+            margin-top: 95px;
         }
 
+        img#head {
+            margin-left: -20px;
+            margin-top: -133px;
+        }
 
-.intro-body {
+        img#arm-r{
+            margin-left: -10px;
+            margin-top: 92px;
+        }
 
-        padding: 2em;
-        font-size: 50px;
-
-}
+        img#arm-l{
+            margin-left: -161px;
+            margin-top: 93px;
+        }
