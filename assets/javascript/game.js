@@ -12,6 +12,7 @@ var dashes = [];
 var userGuesses = [];
 var rand;
 var winCounter=0;
+var img= [];
 
 
 
@@ -29,6 +30,7 @@ function startGame(){
     //Reset
     wrongLetter = [];
     livesLeft = 10;
+    img = [];
 
     //HTML so that it prints on sreen
     document.getElementById('lives-left').textContent = livesLeft;
@@ -59,6 +61,7 @@ var update= function(badLetters, letters) {
     document.getElementById('wordBlanks').textContent = letters.join(', ')
     document.getElementById('wrong-guesses').textContent = badLetters.join(', ')
     document.getElementById('lives-left').textContent = livesLeft
+    document.images('hangman-head').img= livesLeft
    
 }
 
@@ -86,9 +89,10 @@ document.onkeyup = function(event)
     {
         wrongLetter.push(event.key);
         livesLeft--;
+        img++;
         console.log(wrongLetter);
         winLose();
-        update(wrongLetter, dashes);
+        update(wrongLetter, dashes,img);
     }
 }
 //User Guesses
