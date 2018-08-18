@@ -1,13 +1,9 @@
 // Variables 
 var wordBank=['cat','dog','horse','cow','hippopotamus','scorpion','squirrel','chimpanzee','crocodile','alligator','giraffe','hamster','monkey','octopus','owl','panda','goldfish','rabbit']; 
-// userGuess = [];
 var wins = 0;
 var loss = 0;
 var wrongLetter = [];
-// var questionBank;
 var livesLeft = [];
-// var messages;
-// var alphabet =['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z'];
 var dashes = [];
 var userGuesses = [];
 var rand;
@@ -29,7 +25,7 @@ function startGame(){
     {
         dashes.push('_');
     }
-    //Printing dashes to the screen
+    
     document.getElementById('wordBlanks').textContent = dashes.join(" ");
 
     //Reset
@@ -45,27 +41,31 @@ function winLose()
 {
     if(rand === dashes.join(''))
     {
-        // document.write(messages.win);
-        // alert("messages.loose");
+        
         wins++;
         document.getElementById('win-counter').textContent = wins
         document.getElementById('t-rex-roar').play();
         startGame();
         
-        //Later add music and winning picture to this
+        
     }
     else if(livesLeft === 0)
     {
-        //  alert("messages.win");   
+          
          loss++;
          document.getElementById('loss-counter').textContent = loss
+         document.getElementById('t-rex-roar').play();
          
          startGame();
     }
-    else if(livesLeft === 1)
+    else if(livesLeft <= 1)
     {
-        //  alert("messages.win");   
+         
         document.querySelector('.head').setAttribute('src', 'assets/images/inkedHangman-fullBody-lose.jpg')
+    }
+    else if(livesLeft > 1)
+    {
+        document.querySelector('.head').setAttribute('src', 'assets/images/head.jpg')
     }
     
 }  
@@ -110,42 +110,8 @@ document.onkeyup = function(event)
         update(wrongLetter, dashes);
     }
 }
-//User Guesses
 
 
 
 startGame();
-// 
 console.log(rand[0]);
-
-
-
-
-
-
-
-
-
-
-// function calls
-
-
-
-
-
-   //Objects
-
-//    var messages = {
-//     win: 'You win!',
-//     lose: 'Game over!',
-//     guessed: ' already guessed, please try again...',
-//     validLetter: 'Please enter a letter from A-Z',
-// }
-
-// var questionBank = {
-//     'cat': "This question should be visible during guesses"
-//     }
-// }
-
-
-// var letter = event.key.toLowerCase();

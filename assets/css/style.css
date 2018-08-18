@@ -1,7 +1,7 @@
 
     body {
         margin: 0;
-        font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+        font-family: 'Padauk', sans-serif;
         font-size: 2rem;
         font-weight: 400;
         line-height: 1.5;
@@ -24,7 +24,7 @@
 
     .h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
         margin-bottom: .5rem;
-        font-family: inherit;
+        font-family: 'Padauk', sans-serif;
         font-weight: 500;
         line-height: 1.2;
         color: white;
@@ -110,36 +110,54 @@ padding-bottom:1em;
     
 
     img.leg-r {
-    
-    margin-left: -14px;
-    margin-top: 205px;
+          margin-left: -120px;
+          margin-top: -79px;
+          margin-right: 18px;
 }
     
     img.leg-l {
-            margin-left: -141px;
-            margin-top: 214px;
+        margin-left: -145px;
+        margin-top: -78px;
+        margin-right: 34px;
         }
         
         img.chest {
-            margin-left: -10px;
-            margin-top: 95px;
+            margin-left: -150px;
+            margin-top: -182px;
         }
 
         img.head {
-            margin-left: -20px;
-            margin-top: -133px;
+            margin-left: 31px;
+    margin-top: -400px;
+    margin-right: 53px;
         }
 
         img.arm-r{
-            margin-left: -10px;
-            margin-top: 92px;
+            margin-left: -14px;
+    margin-top: -190px;
+    margin-right: 27px;
         }
 
         img.arm-l{
-            margin-left: -161px;
-            margin-top: 93px;
+            margin-left: -117px;
+    margin-top: -187px;
+    margin-right: -48px;
         }
-
+        img.gallow-bottom{
+            margin-left: -156px;
+    margin-top: 526px;
+        }
+        img.gallow-middle{
+            margin-left: -261px;
+            margin-top: -76px;
+            padding-right: 28px;
+        }
+        img.gallow-top{
+            margin-left: -268px;
+            margin-top: -587px;
+            padding-right: -68px;
+            margin-right: 23px;
+        }
 
        
 
@@ -147,4 +165,6 @@ padding-bottom:1em;
             visibility: hidden;
         }
 
-        
+        h1{
+            font-family : 'Padauk' 'sans-serif';
+        }
