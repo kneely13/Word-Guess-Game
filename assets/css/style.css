@@ -102,7 +102,9 @@ padding-bottom:1em;
     }
 
     div#image-container {
-        height:408px;
+        height:400px;
+        width: 170px;
+        margin: auto;
     }
 
     
@@ -113,7 +115,7 @@ padding-bottom:1em;
     margin-top: 205px;
 }
     
-    img#leg-l {
+    /* img#leg-l {
             margin-left: -141px;
             margin-top: 214px;
         }
@@ -136,4 +138,8 @@ padding-bottom:1em;
         img#arm-l{
             margin-left: -161px;
             margin-top: 93px;
+        } */
+
+        .hidden {
+            visibility: hidden;
         }
