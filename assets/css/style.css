@@ -109,37 +109,42 @@ padding-bottom:1em;
 
     
 
-    img#leg-r {
+    img.leg-r {
     
     margin-left: -14px;
     margin-top: 205px;
 }
     
-    /* img#leg-l {
+    img.leg-l {
             margin-left: -141px;
             margin-top: 214px;
         }
         
-        img#chest {
+        img.chest {
             margin-left: -10px;
             margin-top: 95px;
         }
 
-        img#head {
+        img.head {
             margin-left: -20px;
             margin-top: -133px;
         }
 
-        img#arm-r{
+        img.arm-r{
             margin-left: -10px;
             margin-top: 92px;
         }
 
-        img#arm-l{
+        img.arm-l{
             margin-left: -161px;
             margin-top: 93px;
-        } */
+        }
+
+
+       
 
         .hidden {
             visibility: hidden;
         }
+
+        

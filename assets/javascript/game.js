@@ -12,13 +12,17 @@ var dashes = [];
 var userGuesses = [];
 var rand;
 var winCounter=0;
-var imageOrder=document.querySelectorAll(".hidden");
+var imageOrder=document.querySelectorAll(".body-part");
 var imageLength=imageOrder.length;
 
 
 
 function startGame(){
     dashes=[];
+    imageLength = imageOrder.length
+    imageOrder.forEach(function(el) {
+        el.classList.add('hidden')
+    })
  rand = wordBank[Math.floor(Math.random() * wordBank.length)];
     console.log('random Word = ' + rand);
     for(var i = 0; i < rand.length; i++)
@@ -55,8 +59,15 @@ function winLose()
         //  alert("messages.win");   
          loss++;
          document.getElementById('loss-counter').textContent = loss
+         
          startGame();
     }
+    else if(livesLeft === 1)
+    {
+        //  alert("messages.win");   
+        document.querySelector('.head').setAttribute('src', 'assets/images/inkedHangman-fullBody-lose.jpg')
+    }
+    
 }  
 
 var update= function(badLetters, letters) {
