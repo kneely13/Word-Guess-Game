@@ -61,7 +61,7 @@ function winLose()
     else if(livesLeft <= 1)
     {
          
-        document.querySelector('.head').setAttribute('src', 'assets/images/inkedHangman-fullbody-lose.jpg')
+        document.querySelector('.head').setAttribute('src', 'assets/images/inkedHangman-fullBody-lose.jpg')
     }
     else if(livesLeft > 1)
     {
